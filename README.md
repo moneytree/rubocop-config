@@ -28,29 +28,14 @@ inherit_gem:
   moneytree-rubocop-config:
   - rubocop.yml
   - rubocop.rails.yml # for Ruby on Rails
+  - rubocop.test.yml # for MiniTest and RSpec
+  - rubocop.cucumber.yml # for Cucumber
+
+# Some files define `Exclude` for same cops. To merge the `Exclude` rules, add:
+inherit_mode:
+  merge:
+    - Exclude
 ```
-
-To use special rules for test files, add a `.rubocop.yml` under the test folder, and add:
-
-```yml
-# example: /spec/.rubocop.yml
-inherit_from: ../.rubocop.yml
-inherit_gem:
-  moneytree-rubocop-config:
-  - rubocop.test.yml
-```
-
-For Cucumber, we have special rules:
-
-```yml
-# example: /features/.rubocop.yml
-inherit_from: ../.rubocop.yml
-inherit_gem:
-  moneytree-rubocop-config:
-  - rubocop.test.yml
-  - rubocop.cucumber.yml
-```
-
 
 ## Development
 
