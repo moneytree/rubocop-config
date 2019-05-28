@@ -1,0 +1,20 @@
+inherit_from: './rubocop.yml'
+
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/schema.rb'
+
+Rails/Output:
+  Enabled: true
+
+Metrics/BlockLength:
+  Exclude:
+    # ActiveAdmin's DSL prefers long blocks
+    - app/admin/**/*
+    - config/**/*
+
+Style/Documentation:
+  Exclude:
+    # Controller classes are considered self-documented.
+    - app/controllers/**/*

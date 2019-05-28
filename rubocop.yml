@@ -1,0 +1,39 @@
+# Defaults: https://github.com/bbatsov/rubocop/blob/master/config/default.yml
+
+# Accept both [:a, :b, :c] and %i[a b c]
+Style/SymbolArray:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented_relative_to_receiver
+
+Layout/IndentHash:
+  EnforcedStyle: consistent
+
+Metrics/AbcSize:
+  Max: 15
+
+# Accept Japanese characters in comments
+Style/AsciiComments:
+  Enabled: false
+
+# Allow %r as a regular expression syntax
+Style/RegexpLiteral:
+  Enabled: false
+
+# Sometimes you absolutely want to be sure you have a boolean.
+# The guide for this cop even admits that their recommendation
+# doesn't logically equal !!.
+Style/DoubleNegation:
+  Enabled: false
+
+# Developers agreed that it's harder to read assignments across multiple lines.
+Style/ConditionalAssignment:
+  Enabled: false
+
+# Disallow %w[]
+Style/WordArray:
+  Enabled: false
