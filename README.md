@@ -2,6 +2,25 @@
 
 Shared Rubocop config used by Moneytree's Ruby / Rails projects.
 
+### Why
+
+At Moneytree, many of our services are build on Ruby and Rails. As our team
+grows larger, it is necessary to keep all our codes in similar coding styles,
+while providing some level of flexibility to developers.
+
+Instead of sticking with a particular coding style, and potentially introduce
+endless discussion about which one is better, we value:
+
+1. Less Error-Prone - Is one style easier to cause runtime error than another?
+2. Code Readability - Is one style is more readable than another?
+3. Easy On-Boarding - Is it easy for new developers to get used to this coding style?
+4. Shared Knowledge - Does this coding style apply to most of our active projects?
+
+### We're Hiring
+
+Interested in working at the cutting-edge FinTech industry in Japan? Please
+visit our [Careers Page](https://moneytree.jp/careers/) for open positions.
+
 ## Installation
 
 Add this line to your application's Gemfile:
