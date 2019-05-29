@@ -4,7 +4,7 @@ Shared Rubocop config used by Moneytree's Ruby / Rails projects.
 
 ### Why
 
-At Moneytree, many of our services are build on Ruby and Rails. As our team
+At Moneytree, many of our services are built on Ruby and Rails. As our team
 grows larger, it is necessary to keep all our codes in similar coding styles,
 while providing some level of flexibility to developers.
 
