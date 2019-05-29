@@ -2,8 +2,10 @@ inherit_from: './rubocop.yml'
 
 AllCops:
   Exclude:
+    # Auto-generated
     - 'bin/**/*'
     - 'db/schema.rb'
+    - 'db/migrate/*.rb'
 
 Rails/Output:
   Enabled: true
