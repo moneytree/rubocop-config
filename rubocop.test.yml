@@ -1,0 +1,23 @@
+Metrics/ModuleLength:
+  Exclude:
+  - 'test/**/*_test.rb' # minitest
+
+Metrics/BlockLength:
+  Exclude:
+  - 'test/**/*_test.rb' # minitest
+  - 'spec/**/*_spec.rb' # RSpec
+
+Metrics/AbcSize:
+  Exclude:
+  - 'test/**/*_test.rb' # minitest
+  - 'spec/**/*_spec.rb' # RSpec
+
+Style/Documentation:
+  Exclude:
+  - 'test/**/*_test.rb' # minitest
+
+Naming/VariableNumber:
+  Exclude:
+  - 'test/**/*_test.rb' # minitest
+  - 'spec/**/*_spec.rb' # RSpec
+

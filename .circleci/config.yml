@@ -1,0 +1,62 @@
+version: 2.1
+
+executors:
+  ruby_executor:
+    docker:
+    - image: circleci/ruby:2.6.3
+    working_directory: ~/project
+    environment:
+      BUNDLE_PATH: ~/project/vendor/bundle
+      BUNDLER_VERSION: '2.0.1'
+
+commands:
+  restore_bundle_cache:
+    steps:
+      - restore_cache:
+          keys:
+            # when lock file changes, use increasingly general patterns to restore cache
+            - v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - v1-gem-cache-{{ arch }}-{{ .Branch }}-
+            - v1-gem-cache-{{ arch }}-
+
+  bundle_install:
+    steps:
+      - run: gem install "bundler:${BUNDLER_VERSION}"
+      - run: bundle install --path "${BUNDLE_PATH}"
+
+  save_bundle_cache:
+    steps:
+      - save_cache:
+          paths:
+            - vendor/bundle
+          key: v1-gem-cache-{{ arch }}-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+
+jobs:
+  build:
+    executor: ruby_executor
+    steps:
+      - checkout
+      - restore_bundle_cache: {}
+      - bundle_install: {}
+      - save_bundle_cache: {}
+
+  test:
+    executor: ruby_executor
+    steps:
+      - checkout
+      - restore_bundle_cache: {}
+      - bundle_install: {}
+      - save_bundle_cache: {}
+      - run:
+          name: test rubocop settings
+          working_directory: ~/project/test
+          command: bundle exec rubocop
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build

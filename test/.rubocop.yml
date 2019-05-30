@@ -1,0 +1,9 @@
+inherit_from:
+- '../rubocop.yml'
+- '../rubocop.rails.yml'
+- '../rubocop.test.yml'
+- '../rubocop.cucumber.yml'
+
+inherit_mode:
+  merge:
+    - Exclude
