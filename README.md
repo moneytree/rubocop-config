@@ -62,7 +62,7 @@ TODO: write development instructions here
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/moneytree-rubocop-config.
+Bug reports and pull requests are welcome on GitHub at https://github.com/moneytree/moneytree-rubocop-config.
 
 ## License
 
