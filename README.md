@@ -12,7 +12,7 @@ Instead of sticking with a particular coding style, and potentially introduce
 endless discussion about which one is better, we value:
 
 1. Less Error-Prone - Is one style easier to cause runtime error than another?
-2. Code Readability - Is one style is more readable than another?
+2. Code Readability - Is one style more readable than another?
 3. Easy On-Boarding - Is it easy for new developers to get used to this coding style?
 4. Shared Knowledge - Does this coding style apply to most of our active projects?
 
