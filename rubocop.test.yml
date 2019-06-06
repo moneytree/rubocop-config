@@ -22,4 +22,6 @@ Naming/VariableNumber:
   - 'spec/**/*_spec.rb' # RSpec
 
 Metrics/ClassLength:
-  Enabled: false
+  Exclude:
+    - 'test/**/*_test.rb' # minitest
+    - 'spec/**/*_spec.rb' # RSpec
