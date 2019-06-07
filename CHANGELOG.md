@@ -1,3 +1,7 @@
+# 1.0.1
+
+- `Metrics/ClassLength` will not be applied to MiniTest files anymore. (`rubocop.test.yml`) #2 
+
 # 1.0.0
 
 First release :party:
