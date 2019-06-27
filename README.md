@@ -39,6 +39,10 @@ Or install it yourself as:
 
 ## Usage
 
+There are 2 ways we can add these configs to your project.
+
+### Inherit from Gem
+
 Add these lines to your `.rubocop.yml`:
 
 ```yml
@@ -54,6 +58,33 @@ inherit_gem:
 inherit_mode:
   merge:
     - Exclude
+```
+
+### Inherit from Remote URL (GitHub)
+
+The example below assumes you want to fetch from the latest config (i.e., from `master` branch).
+
+This is recommended if you prefer not to install any gem. Rubocop will download and cache copies of these config files locally.
+
+
+For more details, please see the [Rubocop documents here](https://rubocop.readthedocs.io/en/latest/configuration/#inheriting-configuration-from-a-remote-url) 
+
+Add these lines to your `.rubocop.yml`
+
+```yml
+# /.rubocop.yml
+inherit_from:
+  - https://raw.githubusercontent.com/moneytree/rubocop-config/master/rubocop.yml
+  - https://raw.githubusercontent.com/moneytree/rubocop-config/master/rubocop.rails.yml # for Ruby on Rails
+  - https://raw.githubusercontent.com/moneytree/rubocop-config/master/rubocop.test.yml # for MiniTest and RSpec
+  - https://raw.githubusercontent.com/moneytree/rubocop-config/master/rubocop.cucumber.yml # for Cucumber
+```
+
+Add these lines to your `.gitignore` if you wish not to commit the cached copies of these files
+
+```
+# .gitignore
+.rubocop-*
 ```
 
 ## Development
