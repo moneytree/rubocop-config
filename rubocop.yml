@@ -40,3 +40,9 @@ Style/ConditionalAssignment:
 # Disallow %w[]
 Style/WordArray:
   Enabled: false
+
+# https://www.rubydoc.info/gems/rubocop/RuboCop/Cop/Style/NumericPredicate
+# Prefer using comparison operators;
+# Not everyone remembers intuitively that 0 is not positive; operators are more explicit
+Style/NumericPredicate:
+  EnforcedStyle: comparison
