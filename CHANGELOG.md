@@ -1,7 +1,9 @@
 # 1.0.2
 
-- `Layout/FirstHashElementIndentation` is deprecated. Use `Layout/FirstHashElementIndentation` instead.
+- `Layout/IndentFirstHashElement` is deprecated. Use `Layout/FirstHashElementIndentation` instead.
 - `Metrics/LineLength` is now `Layout/LineLength`.
+- Require rubocop `~> 0.79`
+- Require ruboco-rails (this was spun off from the main rubocop project)
 
 # 1.0.1
 
