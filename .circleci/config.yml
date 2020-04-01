@@ -7,7 +7,6 @@ executors:
     working_directory: ~/project
     environment:
       BUNDLE_PATH: ~/project/vendor/bundle
-      BUNDLER_VERSION: '2.0.1'
 
 commands:
   restore_bundle_cache:
@@ -21,7 +20,7 @@ commands:
 
   bundle_install:
     steps:
-      - run: gem install "bundler:${BUNDLER_VERSION}"
+      - run: gem install "bundler:$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | awk '{ print $1 }')"
       - run: bundle install --path "${BUNDLE_PATH}"
 
   save_bundle_cache:
