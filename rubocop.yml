@@ -1,5 +1,11 @@
 # Defaults: https://github.com/bbatsov/rubocop/blob/master/config/default.yml
 
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
 # Accept both [:a, :b, :c] and %i[a b c]
 Style/SymbolArray:
   Enabled: false
@@ -40,3 +46,12 @@ Style/ConditionalAssignment:
 # Disallow %w[]
 Style/WordArray:
   Enabled: false
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
