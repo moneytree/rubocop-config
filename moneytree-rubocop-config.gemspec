@@ -36,8 +36,8 @@ Gem::Specification.new do |spec|
                      .reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
 
-  spec.add_runtime_dependency 'rubocop', '~> 0.79.0'
-  spec.add_runtime_dependency 'rubocop-rails', '~> 2.4.2'
+  spec.add_runtime_dependency 'rubocop', '>= 0.81.0'
+  spec.add_runtime_dependency 'rubocop-rails', '>= 2.5.0'
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'rake', '~> 12.3'
