@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    moneytree-rubocop-config (1.0.0)
+    moneytree-rubocop-config (1.0.3)
       rubocop (>= 0.81.0)
       rubocop-rails (>= 2.5.0)
 
