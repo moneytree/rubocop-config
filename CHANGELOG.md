@@ -2,6 +2,10 @@
 
 <!-- To release, add a new H1 tag of version, and move the Unreleased ones to that new section. Keep Unreleased section empty. -->
 
+- Disable these cops:
+    - `Style/ZeroLengthPredicate`
+    - `Style/NumericPredicate`
+
 # 1.0.3
 
 - Require `rubocop >= 0.81.0`
