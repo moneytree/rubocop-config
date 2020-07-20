@@ -55,3 +55,12 @@ Style/HashTransformKeys:
 
 Style/HashTransformValues:
   Enabled: true
+
+# It sometimes make sense to use #length == 0 or #size == 0, for example, when the object does not implement Enumerable.
+Style/ZeroLengthPredicate:
+  Enabled: false
+
+# > 0, == 0, < 0 is more common in major programming languages.
+# In addition, sometimes it is necessary to compare a non-numeric value with 0 (e.g. params[:size] == 0 but it can be nil)
+Style/NumericPredicate:
+  Enabled: false
