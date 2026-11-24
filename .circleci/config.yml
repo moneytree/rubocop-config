@@ -3,7 +3,7 @@ version: 2.1
 executors:
   ruby_executor:
     docker:
-    - image: circleci/ruby:2.6.3
+    - image: cimg/ruby:3.3.14
     working_directory: ~/project
     environment:
       BUNDLE_PATH: ~/project/vendor/bundle
@@ -21,7 +21,8 @@ commands:
   bundle_install:
     steps:
       - run: gem install "bundler:$(grep -A 1 'BUNDLED WITH' Gemfile.lock | tail -n 1 | awk '{ print $1 }')"
-      - run: bundle install --path "${BUNDLE_PATH}"
+      - run: bundle config set --local path "${BUNDLE_PATH}"
+      - run: bundle install
 
   save_bundle_cache:
     steps:
